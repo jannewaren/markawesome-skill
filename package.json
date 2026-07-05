@@ -1,0 +1,36 @@
+{
+  "name": "markawesome-skill",
+  "version": "0.1.0",
+  "description": "AI authoring skill for Markawesome Markdown — proactively suggests and writes the terse syntax that markawesome / markawesome-js transform into Web Awesome components.",
+  "keywords": [
+    "markawesome",
+    "web-awesome",
+    "webawesome",
+    "markdown",
+    "web-components",
+    "agent-skills",
+    "skills"
+  ],
+  "author": {
+    "name": "Janne Warén",
+    "email": "janne.waren@iki.fi"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jannewaren/markawesome-skill.git"
+  },
+  "homepage": "https://github.com/jannewaren/markawesome-skill",
+  "bugs": {
+    "url": "https://github.com/jannewaren/markawesome-skill/issues"
+  },
+  "files": [
+    "skills",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.txt"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

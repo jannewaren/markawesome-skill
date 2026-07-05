@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.DS_Store
+*.tgz
+
+# npx skills install artifacts (this repo is the skill's source, not a consumer)
+.agents/
+.claude/
+skills-lock.json
