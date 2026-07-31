@@ -6,6 +6,10 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- The documented **Web Awesome version pin moves 3.10.0 → 3.11.0** (`references/authoring.md`, plus the `SKILL.md` and `README.md` pointers to it), matching the bumped CDN pins in the `jekyll-webawesome` and `eleventy-plugin-webawesome` examples sites. The skill's attribute vocabulary is unchanged and was re-verified against 3.11.0: the icon families, the 18 animations, the `xs–xl` size scale and canvas sizing all still match, and no enum any transformer accepts gained or lost a value in this release. The historical "added in WA 3.10.0" attributions in `references/components-content.md` are left as-is — they say when a value appeared, not which version is pinned.
+
 ## [0.1.0] - 2026-07-05
 
 ### Added
