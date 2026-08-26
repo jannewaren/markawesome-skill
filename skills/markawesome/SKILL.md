@@ -94,7 +94,7 @@ self-contained:
 - **`references/layouts.md`** — the six `::::` layouts, the shared gap scale,
   `align`/`justify`, and nesting.
 - **`references/authoring.md`** — dual syntax, Markdown-inside-blocks, image/link
-  auto-detection, the `>>>` separator, front matter, the Web Awesome 3.11.0 pin,
+  auto-detection, the `>>>` separator, front matter, the Web Awesome 3.12.0 pin,
   and static-safety / Pro caveats.
 - **`references/examples.md`** — full generic pages combining many components.
 

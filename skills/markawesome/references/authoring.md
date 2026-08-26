@@ -77,9 +77,9 @@ site generator, not by Markawesome:
 Author the component syntax in the body; leave front-matter conventions to the
 host SSG's own docs.
 
-## Web Awesome version pin: 3.11.0
+## Web Awesome version pin: 3.12.0
 
-The ecosystem's examples sites pin **Web Awesome 3.11.0** in their CDN URLs, and
+The ecosystem's examples sites pin **Web Awesome 3.12.0** in their CDN URLs, and
 this skill's attribute vocabulary (icon families, animations, the `xs–xl` size
 scale, canvas sizing) matches that release. If a project pins a different Web
 Awesome version, some newer families/animations may not exist there — validate

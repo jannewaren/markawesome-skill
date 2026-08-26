@@ -8,7 +8,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- The documented **Web Awesome version pin moves 3.10.0 → 3.11.0** (`references/authoring.md`, plus the `SKILL.md` and `README.md` pointers to it), matching the bumped CDN pins in the `jekyll-webawesome` and `eleventy-plugin-webawesome` examples sites. The skill's attribute vocabulary is unchanged and was re-verified against 3.11.0: the icon families, the 18 animations, the `xs–xl` size scale and canvas sizing all still match, and no enum any transformer accepts gained or lost a value in this release. The historical "added in WA 3.10.0" attributions in `references/components-content.md` are left as-is — they say when a value appeared, not which version is pinned.
+- The documented **Web Awesome version pin moves 3.10.0 → 3.12.0** (`references/authoring.md`, plus the `SKILL.md` and `README.md` pointers to it), matching the bumped CDN pins in the `jekyll-webawesome` and `eleventy-plugin-webawesome` examples sites. The skill's attribute vocabulary is unchanged and was re-verified against both releases: the icon families, the 18 animations, the `xs–xl` size scale and canvas sizing all still match, and no enum any transformer accepts gained or lost a value. WA 3.12.0's only component-level additions — navigation attributes on `<wa-dropdown-item>` and a `filterOptions` column option on `<wa-data-grid>` — land on components with no Markawesome syntax, so nothing this skill teaches changed. The historical "added in WA 3.10.0" attributions in `references/components-content.md` are left as-is — they say when a value appeared, not which version is pinned.
 
 ## [0.1.0] - 2026-07-05
 
