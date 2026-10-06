@@ -206,6 +206,33 @@ A "tip of the day", a rotating testimonial, a featured item that varies per load
 
 → `components-interactive.md`.
 
+### A multi-step process and where the reader is in it → Stepper
+
+"Step 2 of 4", a checkout or onboarding flow, a tutorial's progress, a
+pipeline's status — a task list inside `>>>>>>` with `[x]` on the finished steps.
+
+```
+>>>>>>
+- [x] Install
+- [x] Configure
+- [ ] Deploy
+>>>>>>
+```
+
+Use it for **status**, not for the steps' instructions: keep the how-to as a
+numbered list or headings, and the stepper as the at-a-glance map.
+
+→ `components-content.md`.
+
+### Alternatives side by side, or a quiet section break → Divider
+
+"Sign in with email — or — continue with SSO" wants `--- or ---` between the
+two buttons; a light section marker wants `--- start Release notes ---`; a
+separator between buttons in a row wants `--- vertical or ---` inside a
+`::::cluster`. A plain `---` stays a plain rule.
+
+→ `layouts.md`.
+
 ### A published/updated date → Format date or Relative time
 
 "Published June 26, 2026" → `[[[2026-06-26 style:long]]]`. "Updated 3 days ago" →

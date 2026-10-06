@@ -1,6 +1,6 @@
 # Content components
 
-Callout · Card · Tag · Badge · Button · Copy button · Icon
+Callout · Card · Tag · Badge · Button · Copy button · Icon · Stepper
 
 Every component has a **primary** shorthand delimiter and an equivalent
 **`:::wa-*` alternative**. All attributes are optional and order-independent
@@ -256,3 +256,57 @@ Notifications
 > **Static-site caveat:** an icon renders its glyph into shadow DOM with no
 > light-DOM fallback — with Web Awesome's JavaScript disabled it shows nothing.
 > See `authoring.md`.
+
+## Stepper
+
+Progress through a multi-step process — a checkout, an onboarding flow, a
+tutorial's "you are here", a release pipeline's status. Written as a Markdown
+**task list** inside a `>>>>>>` fence (6 chevrons). Display-only: it shows where
+the reader is; it does not navigate.
+
+- **Primary:** `>>>>>> orientation? label:"text"?` … `>>>>>>`
+- **Alt:** `:::wa-stepper orientation? label:"text"?` … `:::`
+
+**Container:** `horizontal` (default), `vertical`, `auto` → orientation;
+`label:"text"` → accessible name.
+
+**Steps** — each unindented `-`/`*`/`+` list line:
+
+- `[x]` (or `[X]`) → completed (checkmark); `[ ]` or no box → not yet.
+- **Leading flags:** `active` (the current step), `loading`, `disabled`.
+- **Variants:** `neutral`, `brand`, `success`, `warning`, `danger`.
+- **Attention:** `pulse`, `bounce`, `none`.
+- `icon:name` replaces the step number with an icon.
+- The rest of the line is the label (inline Markdown).
+- Lines indented two or more spaces under a step become its **description**.
+
+The current step is the one flagged `active`; otherwise the first incomplete
+step; if every step is done, the last one.
+
+```
+>>>>>> label:"Checkout progress"
+- [x] Cart
+- [x] Shipping
+- [ ] Payment
+- [ ] Review
+>>>>>>
+```
+
+```
+>>>>>> vertical
+- [x] icon:user Create an account
+  Takes about a minute.
+- [ ] active warning pulse icon:envelope Verify your email
+  Check your inbox for the **confirmation** link.
+- [ ] icon:rocket Launch your first project
+>>>>>>
+```
+
+- Steps are one line each (plus description lines) — a stepper is a status
+  display, not a container for step content. For the *content* of each step,
+  use headings or a numbered list below it, or tabs.
+- A flag word at the start of a label is read as a flag (`- active users` →
+  flag `active`, label "users"); rephrase if that bites.
+- `>>>>>>` never collides with the `>>>` separator of details, dialog,
+  popover, tooltip and random content.
+- `<wa-stepper>` is **experimental** in Web Awesome 3.14.0.

@@ -1,6 +1,6 @@
 # Layouts
 
-Grid · Stack · Cluster · Split · Flank · Frame
+Grid · Stack · Cluster · Split · Flank · Frame · Divider
 
 Layouts use the `::::` (**quadruple colon**) fence and map to Web Awesome CSS
 utility containers (`<div class="wa-grid">`, etc.). They **wrap** components —
@@ -125,6 +125,62 @@ An aspect-ratio container for images and media.
 > may not be processed inside layout containers, so `![alt](src)` can fail to
 > render there — this is the one place to drop to HTML. Elsewhere, Markdown
 > images work normally.
+
+## Divider
+
+A labeled rule (Web Awesome 3.13.0+) — "or" between two alternatives, a section
+label, an icon flourish, or an upright separator between items in a row. It is
+**one line** with mirrored dashes; unlike the `::::` layouts it has no fence and
+no body.
+
+- **Primary:** `--- tokens? label ---`
+- **Alt:** `:::wa-divider tokens?` … `:::` — the body is the label (empty → bare
+  divider)
+
+**Leading tokens** (consumed from the left; the rest of the line is the label, as
+inline Markdown): `start`, `center` (default), `end` → label placement;
+`horizontal` (default), `vertical` → orientation; `icon:name` → an icon before
+the label (on its own: an icon-only divider).
+
+```
+::::stack
+%%%brand
+Sign in with email
+%%%
+--- or ---
+%%%neutral
+Continue with SSO
+%%%
+::::
+
+--- start Release notes ---
+
+--- icon:star ---
+```
+
+`vertical` makes an upright separator between inline items:
+
+```
+::::cluster align:center
+%%%success
+Approve
+%%%
+--- vertical or ---
+%%%danger
+Reject
+%%%
+::::
+```
+
+- A plain `---` (and `--- ---`) stays an ordinary `<hr>` — only a line **with a
+  label** between the dashes becomes a `<wa-divider>`. A pipe-less table
+  separator such as `--- | ---` is left alone too.
+- A label that *starts* with `start`, `end`, `vertical`, … would be read as a
+  token. Use the alt form for it: `:::wa-divider` / `start here` / `:::`.
+- Dividers work anywhere — inside layouts, cards, callouts, tabs, accordion and
+  dialog bodies.
+- Don't use one where a heading belongs: a divider label is a quiet marker, not
+  a section title.
 
 ## Nesting
 

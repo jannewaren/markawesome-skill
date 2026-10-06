@@ -2,15 +2,17 @@
 name: markawesome
 description: >-
   Authors and reviews Markawesome-flavoured Markdown — a terse syntax
-  (:::, ===, @@@, !!!, %%%, ^^^, ++++++, &&&, and more) that the markawesome
-  and markawesome-js engines transform into Web Awesome web components
-  (callouts, cards, tabs, accordions, tags, badges, buttons, tooltips,
-  carousels, and grid/stack/cluster/split/flank/frame layouts). Use when
+  (:::, ===, @@@, !!!, %%%, ^^^, ++++++, &&&, >>>>>>, --- label ---, and
+  more) that the markawesome and markawesome-js engines transform into Web
+  Awesome web components (callouts, cards, tabs, accordions, tags, badges,
+  buttons, tooltips, carousels, steppers, labeled dividers, and
+  grid/stack/cluster/split/flank/frame layouts). Use when
   writing, editing, or reviewing Markdown for a site built with markawesome,
   markawesome-js, jekyll-webawesome, or eleventy-plugin-webawesome — and
   proactively whenever plain prose would read better as a component (a warning
   as a callout, a feature list as a card grid, alternatives as tabs, a glossary
-  term as a tooltip). Covers which component to reach for, when, and its exact
+  term as a tooltip, process status as a stepper). Covers which component to
+  reach for, when, and its exact
   syntax.
 license: MIT
 metadata:
@@ -63,6 +65,7 @@ referenced file for exact attributes before writing anything non-trivial.
 | `%%%` | Button | a call-to-action or link that should look like a button | components-content |
 | `<<<` | Copy button | a command, URL, or config value users will copy-paste | components-content |
 | `$$$name` / `:::wa-icon` | Icon | an inline decorative icon, or a labeled block icon | components-content |
+| `>>>>>>` | Stepper | progress through a process — checkout, onboarding, tutorial status (a task list) | components-content |
 | `^^^` | Details | one collapsible block of optional/advanced info | components-interactive |
 | `//////` | Accordion | a *group* of collapsible sections — FAQ, doc sections | components-interactive |
 | `++++++` | Tabs | switchable alternatives — multi-language code, per-OS steps, A/B | components-interactive |
@@ -76,6 +79,7 @@ referenced file for exact attributes before writing anything non-trivial.
 | `;;;` / `;;;;;;` | Video / Playlist | embedded video(s) — Web Awesome **Pro** | components-media |
 | `[[[…]]]` | Format date / Relative time | a localized absolute or "3 days ago" date | components-media |
 | `::::grid` `::::stack` `::::cluster` `::::split` `::::flank` `::::frame` | Layouts | arranging the above (card grids, sidebars, tag clusters) | layouts |
+| `--- label ---` | Divider | a labeled break — "or" between alternatives, a section label, a separator in a row | layouts |
 
 ## Where to read what
 
@@ -86,13 +90,13 @@ self-contained:
   why, a generic snippet, and the anti-patterns. Read this first when deciding
   *whether* and *which*.
 - **`references/components-content.md`** — callout, card, tag, badge, button,
-  copy button, icon.
+  copy button, icon, stepper.
 - **`references/components-interactive.md`** — details, accordion, tabs, dialog,
   popover, tooltip, random content, tree.
 - **`references/components-media.md`** — carousel, comparison, video, video
   playlist, format date, relative time.
 - **`references/layouts.md`** — the six `::::` layouts, the shared gap scale,
-  `align`/`justify`, and nesting.
+  `align`/`justify`, nesting, and the labeled divider.
 - **`references/authoring.md`** — dual syntax, Markdown-inside-blocks, image/link
   auto-detection, the `>>>` separator, front matter, the Web Awesome 3.14.0 pin,
   and static-safety / Pro caveats.

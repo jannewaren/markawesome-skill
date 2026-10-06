@@ -43,7 +43,8 @@ Exceptions where the body is **plain text, not Markdown**:
 - **Random content** (`......`) — separates each option from the next.
 
 It only has meaning **inside** one of those blocks. Elsewhere `>` is an ordinary
-Markdown blockquote.
+Markdown blockquote. The **Stepper** fence `>>>>>>` (six chevrons) is a separate
+delimiter and never acts as a separator.
 
 ## Image & link auto-detection in cards
 
@@ -103,6 +104,9 @@ Know the exceptions:
 - **Declarative-safe but note the runtime quirk:** Tree (`||||||`) expands only
   top-level branches on load (WA 3.9.0). Random content (`......`) and Accordion
   (`//////`) are stable in Web Awesome (since 3.13.0) and fully declarative here.
+- **Experimental but declarative:** Stepper (`>>>>>>`) emits `<wa-stepper>`,
+  experimental in Web Awesome 3.14.0. It is display-only here (no click-to-navigate),
+  so it needs no JavaScript of your own.
 
 When a page must work with scripting disabled, prefer the declarative-safe
 components and avoid the shadow-DOM-only ones for essential content.
