@@ -77,9 +77,9 @@ site generator, not by Markawesome:
 Author the component syntax in the body; leave front-matter conventions to the
 host SSG's own docs.
 
-## Web Awesome version pin: 3.12.0
+## Web Awesome version pin: 3.14.0
 
-The ecosystem's examples sites pin **Web Awesome 3.12.0** in their CDN URLs, and
+The ecosystem's examples sites pin **Web Awesome 3.14.0** in their CDN URLs, and
 this skill's attribute vocabulary (icon families, animations, the `xs–xl` size
 scale, canvas sizing) matches that release. If a project pins a different Web
 Awesome version, some newer families/animations may not exist there — validate
@@ -101,8 +101,8 @@ Know the exceptions:
 - **Fires an event but doesn't act on its own:** a Tag's `with-remove` × button
   fires `wa-remove` but doesn't remove the tag without your listener.
 - **Declarative-safe but note the runtime quirk:** Tree (`||||||`) expands only
-  top-level branches on load (WA 3.9.0); Random content (`......`) and Accordion
-  (`//////`) are experimental in Web Awesome but fully declarative here.
+  top-level branches on load (WA 3.9.0). Random content (`......`) and Accordion
+  (`//////`) are stable in Web Awesome (since 3.13.0) and fully declarative here.
 
 When a page must work with scripting disabled, prefer the declarative-safe
 components and avoid the shadow-DOM-only ones for essential content.

@@ -63,8 +63,8 @@ The core library is free and open source.
 //////
 ```
 
-`wa-accordion` is experimental in Web Awesome, but everything here is declarative
-and static-site-safe.
+`wa-accordion` is stable in Web Awesome (since 3.13.0), and everything here is
+declarative and static-site-safe.
 
 ## Tabs
 
