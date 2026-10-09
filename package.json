@@ -1,6 +1,6 @@
 {
   "name": "markawesome-skill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AI authoring skill for Markawesome Markdown — proactively suggests and writes the terse syntax that markawesome / markawesome-js transform into Web Awesome components.",
   "keywords": [
     "markawesome",

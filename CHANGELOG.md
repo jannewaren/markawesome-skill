@@ -6,6 +6,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-09
+
 ### Added
 
 - **Stepper** (`>>>>>>` around a task list → a display-only `<wa-stepper>`, Web Awesome 3.14.0, experimental): a new section in `references/components-content.md` (container `horizontal`/`vertical`/`auto` + `label:"…"`; per-step `[x]`, `active`/`loading`/`disabled`, variants, attention, `icon:name`, indented descriptions; how the current step is chosen; the flag-word and status-not-content caveats), a roster row in `SKILL.md`, a "multi-step process" entry in `references/when-to-use.md`, and a static-safety note plus a `>>>>>>` vs `>>>` note in `references/authoring.md`.
