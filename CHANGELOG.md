@@ -6,6 +6,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-20
+
 ### Added
 
 - **Lightbox** (`::::lightbox` around image lines → `<wa-lightbox>`, Web Awesome 3.15.0, experimental): a new section in `references/components-media.md` (plain vs linked-thumbnail items, video items, captions, `loop`/`thumbnails`/`no-nav`/`no-counter`/`no-zoom`/`label:`, thumbnail shapes, grid `gap:`/`min:`, nesting, no-JS fallback, lightbox vs carousel), a roster row in `SKILL.md`, and a "photo gallery" entry in `references/when-to-use.md`.
