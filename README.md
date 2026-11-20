@@ -68,7 +68,7 @@ skills/markawesome/
     ├── when-to-use.md               # content-pattern → component decision guide
     ├── components-content.md        # callout, card, tag, badge, button, copy button, icon
     ├── components-interactive.md    # details, accordion, tabs, dialog, popover, tooltip, random content, tree
-    ├── components-media.md          # carousel, comparison, video, playlist, format date, relative time
+    ├── components-media.md          # carousel, comparison, lightbox, video, playlist, format date, relative time, counter, number ticker
     ├── layouts.md                   # grid, stack, cluster, split, flank, frame
     ├── authoring.md                 # dual syntax, caveats, the WA 3.15.0 pin
     └── examples.md                  # generic full-page worked examples
