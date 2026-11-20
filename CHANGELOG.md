@@ -6,6 +6,10 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- **Documented Web Awesome pin moved to 3.15.0** (`README.md`, `SKILL.md`, `references/authoring.md`). `<wa-stepper>` is stable as of 3.15.0, so its "experimental" caveats in `references/authoring.md` and `references/components-content.md` are gone.
+
 ## [0.2.0] - 2026-10-09
 
 ### Added

@@ -309,4 +309,4 @@ step; if every step is done, the last one.
   flag `active`, label "users"); rephrase if that bites.
 - `>>>>>>` never collides with the `>>>` separator of details, dialog,
   popover, tooltip and random content.
-- `<wa-stepper>` is **experimental** in Web Awesome 3.14.0.
+- `<wa-stepper>` is stable as of Web Awesome 3.15.0.

@@ -78,9 +78,9 @@ site generator, not by Markawesome:
 Author the component syntax in the body; leave front-matter conventions to the
 host SSG's own docs.
 
-## Web Awesome version pin: 3.14.0
+## Web Awesome version pin: 3.15.0
 
-The ecosystem's examples sites pin **Web Awesome 3.14.0** in their CDN URLs, and
+The ecosystem's examples sites pin **Web Awesome 3.15.0** in their CDN URLs, and
 this skill's attribute vocabulary (icon families, animations, the `xs–xl` size
 scale, canvas sizing) matches that release. If a project pins a different Web
 Awesome version, some newer families/animations may not exist there — validate
@@ -104,9 +104,9 @@ Know the exceptions:
 - **Declarative-safe but note the runtime quirk:** Tree (`||||||`) expands only
   top-level branches on load (WA 3.9.0). Random content (`......`) and Accordion
   (`//////`) are stable in Web Awesome (since 3.13.0) and fully declarative here.
-- **Experimental but declarative:** Stepper (`>>>>>>`) emits `<wa-stepper>`,
-  experimental in Web Awesome 3.14.0. It is display-only here (no click-to-navigate),
-  so it needs no JavaScript of your own.
+- **Stable and declarative:** Stepper (`>>>>>>`) emits `<wa-stepper>`, stable
+  since Web Awesome 3.15.0. It is display-only here (no click-to-navigate), so it
+  needs no JavaScript of your own.
 
 When a page must work with scripting disabled, prefer the declarative-safe
 components and avoid the shadow-DOM-only ones for essential content.
