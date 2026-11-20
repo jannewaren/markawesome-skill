@@ -240,6 +240,34 @@ separator between buttons in a row wants `--- vertical or ---` inside a
 
 → `components-media.md`.
 
+### A countdown, or "how long has this been running" → Counter
+
+"Launch in 12 days 4 hours" → `[[[2026-12-24T18:00:00Z countdown finished:"We're live!"]]]`.
+"Up for 6 years 8 months" → `[[[2020-03-01 countup largest:years smallest:days]]]`.
+Add `finished:` to a countdown so it still says something once the date passes.
+Don't use it for a plain date — that is Format date.
+
+→ `components-media.md`.
+
+### A headline stat or metric → Number ticker
+
+"87% satisfaction", "€18,452 raised", "12,000 users" on a landing page or report
+→ `[[[87%]]]`, `[[[18452.75 currency:EUR]]]`, `[[[12000 from:10000]]]`. The number
+animates when it scrolls into view. Keep plain numbers in running prose as text —
+reserve tickers for the few figures you want to stand out.
+
+→ `components-media.md`.
+
+### A photo gallery, screenshots, or a set of clips → Lightbox
+
+Several images the reader may want to see large → `::::lightbox` with one image
+per line (titles become captions; `thumbnails` adds a strip in the viewer). Use a
+linked image `[![alt](thumb)](full)` for big originals, and a link to an `.mp4`
+for a video. For a single inline image, or one-at-a-time slides, prefer the plain
+image or a Carousel.
+
+→ `components-media.md`.
+
 ### A sidebar-plus-content or header-with-actions section → Layout
 
 - Sidebar + main → `::::flank`.

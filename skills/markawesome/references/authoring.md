@@ -96,9 +96,13 @@ Know the exceptions:
   `<wa-video>` / `<wa-video-playlist>`, which are Pro (and experimental). They do
   nothing on a free kit.
 - **No light-DOM fallback (needs Web Awesome's JS to show anything):** Icon
-  (`$$$` / `:::wa-icon`), Format date (`[[[…]]]`), and Relative time
-  (`[[[relative …]]]`) render generated content into shadow DOM. With Web
-  Awesome's JavaScript disabled they show nothing.
+  (`$$$` / `:::wa-icon`), Format date (`[[[…]]]`), Relative time
+  (`[[[relative …]]]`), Counter (`[[[… countdown]]]`) and Number ticker
+  (`[[[87%]]]`) render generated content into shadow DOM. With Web Awesome's
+  JavaScript disabled they show nothing.
+- **Experimental in Web Awesome 3.15.0:** Lightbox (`::::lightbox`), Counter and
+  Number ticker. All three are declarative here. A lightbox degrades gracefully:
+  every thumbnail links to its full-size file.
 - **Fires an event but doesn't act on its own:** a Tag's `with-remove` × button
   fires `wa-remove` but doesn't remove the tag without your listener.
 - **Declarative-safe but note the runtime quirk:** Tree (`||||||`) expands only

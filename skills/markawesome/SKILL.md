@@ -76,8 +76,11 @@ referenced file for exact attributes before writing anything non-trivial.
 | `\|\|\|\|\|\|` | Tree | a file/dir hierarchy or nested navigation from a bullet list | components-interactive |
 | `~~~~~~` | Carousel | an image gallery or step-by-step visual slides | components-media |
 | `\|\|\|` | Comparison | a before/after two-image slider | components-media |
+| `::::lightbox` | Lightbox | a photo/video gallery of thumbnails that open a full-screen viewer | components-media |
 | `;;;` / `;;;;;;` | Video / Playlist | embedded video(s) — Web Awesome **Pro** | components-media |
 | `[[[…]]]` | Format date / Relative time | a localized absolute or "3 days ago" date | components-media |
+| `[[[date countdown]]]` / `[[[date countup]]]` | Counter | a launch/sale countdown, or "running for 6 years" | components-media |
+| `[[[87%]]]` / `[[[1234 currency:EUR]]]` | Number ticker | a stat that counts up on scroll — metrics, totals, satisfaction | components-media |
 | `::::grid` `::::stack` `::::cluster` `::::split` `::::flank` `::::frame` | Layouts | arranging the above (card grids, sidebars, tag clusters) | layouts |
 | `--- label ---` | Divider | a labeled break — "or" between alternatives, a section label, a separator in a row | layouts |
 

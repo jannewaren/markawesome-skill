@@ -54,6 +54,45 @@ images**.
 |||
 ```
 
+## Lightbox
+
+A photo/video gallery: a grid of thumbnails that open a full-screen viewer with
+zoom, swipe and keyboard navigation (`<wa-lightbox>`, experimental in Web Awesome
+3.15.0). The gallery *is* a `wa-grid`, so it uses the four-colon layout fence.
+
+- **Primary:** `::::lightbox params?` … `::::`
+- **Alt:** `:::wa-lightbox params?` … `:::`
+
+**Items** — one per line:
+
+- `![alt](src "caption")` — the image is both thumbnail and full-size.
+- `[![alt](thumb.jpg)](full.jpg "caption")` — a linked image sets a separate
+  (smaller) thumbnail; the viewer opens the link target.
+- A link to `.mp4`, `.webm`, `.mov`, `.ogv` or `.m4v` becomes a **video** item —
+  use a poster image as its thumbnail.
+- The caption is the link title, else the image title. Blank lines are ignored;
+  any other line is rendered as Markdown in place (it becomes a grid cell).
+
+**Params:** `loop`, `thumbnails` (a thumbnail strip in the viewer), `no-nav`,
+`no-counter`, `no-zoom`, `label:"…"` (accessible name); thumbnail crop `square`
+(default), `landscape` (4 / 3), `portrait` (3 / 4) or `natural` (uncropped);
+grid `gap:SIZE`, `min:CSS` (minimum column width), `align:`, `justify:`.
+
+```
+::::lightbox thumbnails loop min:10rem gap:s label:"Lisbon trip"
+![Tram](tram.jpg "Tram 28 in Alfama")
+[![Bridge](bridge-thumb.jpg)](bridge-full.jpg "25 de Abril")
+[![Drone](drone-poster.jpg)](drone.mp4 "From above")
+::::
+```
+
+- Each item's `src` is a real link, so without JavaScript the thumbnails still
+  link to the full-size files.
+- A lightbox nests inside cards, tabs and `::::grid`/`::::stack` layouts.
+- With the image-dialog option on, gallery images are **not** wrapped in dialogs.
+- Lightbox vs carousel: a lightbox shows *all* thumbnails at once and opens a
+  viewer; a carousel shows one slide at a time inline.
+
 ## Video (Web Awesome Pro)
 
 Embed a single video as `<wa-video>`. **Requires a Web Awesome Pro kit** and is
@@ -170,6 +209,59 @@ Updated [[[relative 2026-06-20]]].
 :::
 ```
 
-> **Static-site caveat (Format date & Relative time):** like `<wa-icon>`, both
-> render generated text into shadow DOM with **no light-DOM fallback** — with Web
-> Awesome's JavaScript disabled they show nothing. See `authoring.md`.
+## Counter
+
+A live countdown to — or count up from — a date (`<wa-counter>`, experimental in
+Web Awesome 3.15.0). A mode of the `[[[…]]]` date syntax: add `countdown` or
+`countup`.
+
+- **Inline primary:** `[[[date countdown|countup tokens?]]]`
+- **Block alt:** `:::wa-counter date tokens?` (empty body, close `:::`); counts
+  down unless `up`/`countup`.
+
+**Tokens:**
+
+- `largest:` / `smallest:` — `years|months|days|hours|minutes|seconds`; time beyond
+  the largest unit rolls into it (two days → 48 hours with `largest:hours`).
+- `format:long|short|narrow` — unit label style (default `long`).
+- `no-labels` — hide unit labels; `delimiter:":"` — text between units.
+- `label:"…"` — accessible name; `lang:` / `locale:`.
+- `finished:"…"` — shown instead of the units once a countdown reaches zero
+  (including a date already in the past at page load).
+
+Quote any value containing spaces: `key:"…"` or `key:'…'`.
+
+```
+Launch in [[[ 2026-12-24T18:00:00Z countdown finished:"We're live!" ]]]
+Up for [[[ 2020-03-01 countup largest:years smallest:days format:short ]]]
+[[[ 2027-01-01T00:00:00Z countdown largest:hours no-labels delimiter:":" ]]]
+```
+
+## Number ticker
+
+A number that counts up to its value when it scrolls into view, formatted with
+`Intl.NumberFormat` (`<wa-number-ticker>`, experimental in Web Awesome 3.15.0).
+Also `[[[…]]]`: start with a **number** instead of a date.
+
+- **Inline primary:** `[[[number tokens?]]]`
+- **Block alt:** `:::wa-number-ticker number tokens?` (close `:::`).
+
+`87%` means 87 percent — it becomes `type="percent" value="0.87"` at build time.
+
+**Tokens:** `currency:XXX` (ISO 4217, e.g. `EUR`), `display:symbol|narrowSymbol|code|name`,
+`percent` (percent formatting, value as written), `from:N` (start value),
+`duration:MS`, `delay:MS`, `easing:VALUE` (any CSS easing; quote values with
+spaces), `eager` (start immediately), `no-grouping` (no thousands separators),
+`decimals:N` (fixed fraction digits), `lang:` / `locale:`.
+
+```
+Raised [[[ 18452.75 currency:EUR ]]] so far.
+[[[ 87% ]]] satisfaction · [[[ 12000 from:10000 duration:1500 ]]] users
+```
+
+A date like `2026-06-26` never counts as a number, so dates are unaffected.
+
+> **Static-site caveat (Format date, Relative time, Counter, Number ticker):**
+> like `<wa-icon>`, all four render generated text into shadow DOM with **no
+> light-DOM fallback** — with Web Awesome's JavaScript disabled they show nothing.
+> See `authoring.md`.

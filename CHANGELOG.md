@@ -6,6 +6,11 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- **Lightbox** (`::::lightbox` around image lines → `<wa-lightbox>`, Web Awesome 3.15.0, experimental): a new section in `references/components-media.md` (plain vs linked-thumbnail items, video items, captions, `loop`/`thumbnails`/`no-nav`/`no-counter`/`no-zoom`/`label:`, thumbnail shapes, grid `gap:`/`min:`, nesting, no-JS fallback, lightbox vs carousel), a roster row in `SKILL.md`, and a "photo gallery" entry in `references/when-to-use.md`.
+- **Counter** (`[[[date countdown|countup …]]]` → `<wa-counter>`) and **Number ticker** (`[[[87%]]]`, `[[[1234 currency:EUR]]]` → `<wa-number-ticker>`), both Web Awesome 3.15.0, experimental: new sections after the date sections in `references/components-media.md` (tokens, quoting values with spaces, the `finished:` text, the percent shift), roster rows in `SKILL.md`, "countdown" and "headline stat" entries in `references/when-to-use.md`, and static-safety / experimental notes in `references/authoring.md`.
+
 ### Changed
 
 - **Documented Web Awesome pin moved to 3.15.0** (`README.md`, `SKILL.md`, `references/authoring.md`). `<wa-stepper>` is stable as of 3.15.0, so its "experimental" caveats in `references/authoring.md` and `references/components-content.md` are gone.
